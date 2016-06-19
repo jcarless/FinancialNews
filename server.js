@@ -33,7 +33,7 @@ db.once('open', function () {
 });
 
 //routing
-require("./app/routes/routes.js")(app);
+require("./app/Routes/routes.js")(app);
 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);

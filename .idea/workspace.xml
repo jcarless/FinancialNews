@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad1dcb14-437f-4480-8755-1a94ef069345" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-    </list>
+    <list default="true" id="ad1dcb14-437f-4480-8755-1a94ef069345" name="Default" comment="" />
     <ignored path="FinancialNews.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +54,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="251">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -154,20 +152,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FinancialNews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FinancialNews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -186,7 +170,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="Routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,12 +258,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466349725322</updated>
-      <workItem from="1466349727607" duration="18539000" />
+      <workItem from="1466349727607" duration="19131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18539000" />
+    <option name="totallyTimeSpent" value="19131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -447,8 +431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="251">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding />
         </state>
       </provider>

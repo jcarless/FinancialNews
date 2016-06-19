@@ -11,8 +11,6 @@ var helpers = {
                 return results;
             })
     }
-
-
 };
 
 module.exports = helpers;

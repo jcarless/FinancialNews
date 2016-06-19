@@ -53,9 +53,7 @@
 
 	var routes = __webpack_require__(229);
 
-	// Renders the contents according to the route page.
-	// Displays the contents in the div app of index.html
-	// Note how ReactDOM takes in two parameters (the contents and the location)
+	// point our app to config/routes for client side routing
 	ReactDOM.render(React.createElement(
 	    Router,
 	    null,
@@ -25889,10 +25887,7 @@
 	var Headlines = __webpack_require__(231);
 	var Article = __webpack_require__(232);
 
-	module.exports =
-
-	/*High level component is the Main component*/
-	React.createElement(
+	module.exports = React.createElement(
 	    Route,
 	    { path: '/', component: Main },
 	    React.createElement(Route, { path: 'Headlines', component: Headlines }),
@@ -25906,7 +25901,6 @@
 
 	'use strict';
 
-	// Include React and React-Router dependencies
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(168);
 
@@ -25919,54 +25913,50 @@
 
 	    render: function render() {
 
-	        return(
-	            /*We can only render a single div. So we need to group everything inside of this main-container one*/
+	        return React.createElement(
+	            'div',
+	            { className: 'main-container' },
 	            React.createElement(
 	                'div',
-	                { className: 'main-container' },
+	                { className: 'container' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'container' },
+	                    { className: 'row' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'row' },
+	                        { className: 'jumbotron' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'The Financial News'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'View articles from CNBC'
+	                        ),
 	                        React.createElement(
 	                            'div',
-	                            { className: 'jumbotron' },
+	                            null,
 	                            React.createElement(
-	                                'h1',
-	                                null,
-	                                'The Financial News Notebook'
+	                                'a',
+	                                { href: '#/Headlines', className: 'btn btn-primary btn-lg', role: 'button' },
+	                                'Home'
 	                            ),
 	                            React.createElement(
-	                                'p',
-	                                null,
-	                                'Take notes on CNBC headlines'
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                null,
-	                                React.createElement(
-	                                    'a',
-	                                    { href: '#/Headlines', className: 'btn btn-primary btn-lg', role: 'button' },
-	                                    'Home'
-	                                ),
-	                                React.createElement(
-	                                    'a',
-	                                    { href: '/scrape', className: 'btn btn-primary btn-lg', role: 'button' },
-	                                    'Update'
-	                                )
+	                                'a',
+	                                { href: '/scrape', className: 'btn btn-primary btn-lg', role: 'button' },
+	                                'Update'
 	                            )
 	                        )
-	                    ),
-	                    this.props.children
-	                )
+	                    )
+	                ),
+	                this.props.children
 	            )
 	        );
 	    }
 	});
 
-	// Export the module back to the route
 	module.exports = Main;
 
 /***/ },
@@ -26015,15 +26005,13 @@
 	                        React.createElement(
 	                            'em',
 	                            null,
-	                            'Save your first article...'
+	                            'Please update the database...'
 	                        )
 	                    )
 	                )
 	            );
 	        } else {
-
 	            var articles = this.state.savedArticles.map(function (article, index) {
-
 	                return React.createElement(
 	                    'div',
 	                    { key: index },
@@ -26069,7 +26057,6 @@
 	    }
 	});
 
-	// Export the module back to the route
 	module.exports = Headlines;
 
 /***/ },
@@ -26085,12 +26072,10 @@
 	    displayName: 'Article',
 
 
-	    // Here we will save states for the contents we save
 	    getInitialState: function getInitialState() {
 	        return {
 	            title: "",
-	            url: "",
-	            pubdate: ""
+	            url: ""
 	        };
 	    },
 
@@ -26113,7 +26098,7 @@
 	                    React.createElement(
 	                        'h1',
 	                        null,
-	                        'Article Title'
+	                        'Article Title Will Go Here'
 	                    ),
 	                    React.createElement(
 	                        'p',
@@ -26142,7 +26127,6 @@
 
 	});
 
-	// Export the module back to the route
 	module.exports = Article;
 
 /***/ },
@@ -26162,7 +26146,6 @@
 	            return results;
 	        });
 	    }
-
 	};
 
 	module.exports = helpers;

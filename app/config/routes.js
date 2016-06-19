@@ -10,13 +10,12 @@ var Article = require('../components/Article');
 
 module.exports = (
 
-    /*High level component is the Main component*/
     <Route path='/' component={Main}>
 
         <Route path='Headlines' component={Headlines} />
         <Route path='Article' component={Article} />
 
-
+        {/* Route will default to IndexRoute */}
         <IndexRoute component={Headlines} />
 
     </Route>

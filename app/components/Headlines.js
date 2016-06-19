@@ -30,30 +30,23 @@ var Headlines = React.createClass({
             return(
 
                 <li className="list-group-item">
-
                     <h3>
-                        <span><em>Save your first article...</em></span>
+                        <span><em>Please update the database...</em></span>
                     </h3>
-
                 </li>
-
             )
         }
 
         else {
-
             var articles = this.state.savedArticles.map(function(article, index){
-
                 return(
 
                     <div key={index}>
 
                         <a href='#/Article' role="button" className="list-group-item">{article.title}</a>
 
-
                     </div>
                 )
-
             }.bind(this))
 
         }
@@ -78,5 +71,4 @@ var Headlines = React.createClass({
     }
 });
 
-// Export the module back to the route
 module.exports = Headlines;

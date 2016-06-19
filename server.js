@@ -21,7 +21,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 // MongoDB Configuration configuration
-mongoose.connect('mongodb://admin:admin@ds057954.mlab.com:57954/businessnewsscrapperdb');
+mongoose.connect('mongodb://admin:admin@ds021663.mlab.com:21663/heroku_q3z6l55v');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
@@ -32,59 +32,8 @@ db.once('open', function () {
     console.log('Mongoose connection successful.');
 });
 
-//-------------------------------------------
-
-// Main Route
-app.get('/', function(req, res){
-    res.sendFile('./public/index.html');
-});
-
-// Route to get all saved articles
-app.get('/api/headlines', function(req, res) {
-
-    var headlines = [];
-    Article.find({})
-        .exec(function(err, article){
-            for(var i = 0; i < article.length; i++){
-                headlines.push({title: article[i].title, id: article[i]._id});
-            }
-            res.send(headlines);
-            console.log('headlines: ' + headlines);
-        });
-});
-
-app.get('/scrape', function(req, res){
-    request('http://www.cnbc.com/', function(error, response, html) {
-        var $ = cheerio.load(html);
-        $('h3.headline').each(function(i, element) {
-
-            var result = {};
-
-
-            result.title = $(this).children('a').text();
-            linkRaw = $(this).children('a').attr('href');
-            result.link = "www.cnbc.com" + linkRaw;
-
-            console.log('result: ' + result);
-
-
-            var entry = new Article (result);
-
-            entry.save(function(err, doc) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log(doc);
-                }
-            });
-
-        }); //each
-    }); //request
-    res.redirect('/');
-});
-
-
-
+//routing
+require("./app/routes/routes.js")(app);
 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);

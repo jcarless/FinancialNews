@@ -21,7 +21,7 @@ var Main = React.createClass({
                             <p>Take notes on CNBC headlines</p>
                             <div>
                                 <a href="#/Headlines" className="btn btn-primary btn-lg" role="button">Home</a>
-                                <a href="/" className="btn btn-primary btn-lg" role="button">Update</a>
+                                <a href="/scrape" className="btn btn-primary btn-lg" role="button">Update</a>
                             </div>
                         </div>
                     </div>

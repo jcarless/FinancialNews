@@ -21,7 +21,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 // MongoDB Configuration configuration
-mongoose.connect('mongodb://admin:admin@ds021663.mlab.com:21663/heroku_q3z6l55v');
+mongoose.connect('mongodb://admin:admin@ds023912.mlab.com:23912/heroku_p165532t');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
